@@ -13,6 +13,7 @@ sudo chmod -R 775 /opt/sonarqube/
 hostname sonar
 sudo su - sonar
 ## 3. Enable PasswordAuthentication
+sudo passwd sonar
 sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
 sudo service sshd restart
 
